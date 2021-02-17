@@ -13,7 +13,7 @@ const Contact = () => {
 
   function sendEmail(e) {
     e.preventDefault()
-    emailjs.sendForm('service_ish85ye', 'template_y0ks24g', e.target, 'user_YjdSevahEMYTufwwPDZ7e')
+    emailjs.sendForm('service_b3h8chy', 'template_7ohzpl8', e.target, 'user_3U2GiRgLRTvPxlpsk0Lt9')
       .then((result) => {
         location.reload()
         console.log(result.text)
@@ -24,7 +24,7 @@ const Contact = () => {
 
   return <>
     <section id="contact" className="skills">
-      <h3>Contact</h3>
+      <h2>Contact</h2>
       <div className="devicon">
         {/* Email */}
         <div className="singleIcon" onClick={() => {
@@ -57,7 +57,6 @@ const Contact = () => {
         </form>
 
       </div>
-
 
     </section>
   </>

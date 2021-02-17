@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
 const NavBar = () => {
-  const [clicked, setClicked] = useState(false)
+  // const [clicked, setClicked] = useState('')
 
+  // function setActive (e) {
+  //   return setClicked(active)
+  // }
   return <nav>
     <div className="navbar">
       <a href="#about">About</a>

@@ -3,7 +3,7 @@ import React from 'react'
 const Skills = () => {
   return <>
     <section id="skills">
-      <h3>Skills</h3>
+      <h2>Skills</h2>
       {/* DEVICONS */}
       <div className="devicon">
         {/* JavaScrip */}
