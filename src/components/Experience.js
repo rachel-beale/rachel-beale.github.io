@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import cv from '../images/cv.png'
 import logo from '../images/logo.png'
+import cvpdf from '../images/rachel-beale-cv.pdf'
 
 // ! TO UPLOAD FINISHED CV AS PDF!
 const info = {
@@ -9,7 +10,7 @@ const info = {
     company: 'General Assembly',
     dates: 'December 2020 - Present',
     title: 'Teaching Assistant',
-    details: 'Approached by General Assembly to become a teaching assistant for the upcoming Software Engineering immersive course. Taught the fundamentals of range of languages and frameworks - including JavaScript, React, NodeJS, Express, MongoDB & Python. Supported students learning through office hours as well as routinely debugged and reviewing students code.',
+    details: 'Approached by General Assembly to become a teaching assistant for the upcoming Software Engineering Immersive course. Taught the fundamentals of a range of languages and frameworks - including JavaScript, React, NodeJS, Express, MongoDB & Python. Supported students learning through office hours as well as routinely debugged and reviewing students code.',
     location: 'London, Remote | '
   },
   'ga': {
@@ -20,7 +21,8 @@ const info = {
     location: 'London, Remote | '
   },
   'cv': {
-    company: <a className="download" href="../images/cm-frontend-dev-test.pdf" download>Click <span className="underline">here</span> to download my CV</a>,
+    company:
+      <a className="download" href={cvpdf} target="_blank" download>Click <span className="underline">here</span> to download my CV</a>,
     dates: '',
     title: <a className="download" href="https://www.linkedin.com/in/rachel-beale" target="_blank">Or take a look at my <span className="underline">LinkedIn</span></a>,
     details: '',
@@ -68,10 +70,8 @@ const Experience = () => {
         <h3>{info[hover].company}</h3>
         <h4>{info[hover].title}</h4>
         <p className="infoDetails">{info[hover].details}</p>
-        {/* <p>{info[hover].detailsSecond}</p>
-        <p>{info[hover].detailsThird}</p> */}
       </div>
-      {/* <a href="../images/cm-frontend-dev-test.pdf" download>HERE</a>        </div> */}
+
     </div>
 
 

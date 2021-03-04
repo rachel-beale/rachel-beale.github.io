@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsLink45Deg } from 'react-icons/bs'
 
-import projectInfo from './toShow'
+import projectInfo from './ProjectInfo'
 
 const Projects = () => {
   const [page, setPage] = useState(1)
@@ -47,17 +47,29 @@ const Projects = () => {
               <div className="leftTop">
                 <h3>{project.name}</h3>
                 <p>{project.projectType}</p>
-                <i className={project.iconOne}></i>
-                <i className={project.iconTwo}></i>
-                <i className={project.iconThree}></i>
-                <i className={project.iconFour}></i>
+                <div className="iconFlex">
+                  <div className="projectsIcon">
+                    <i className={project.iconOne}></i>
+                  </div>
+                  <div className="projectsIcon">
+                    <i className={project.iconTwo}></i>
+                  </div>
+                  <div className="projectsIcon">
+                    <i className={project.iconThree}></i>
+                  </div>
+                  <div className="projectsIcon">
+                    <i className={project.iconFour}></i>
+                  </div>
+                </div>
+
+
                 <p>{project.description}</p>
                 <p>Take a look: </p>
-                <a className="singleIcon" href={project.github} target="_blank">
+                <a className="projectsIcon" href={project.github} target="_blank">
                   <i className="devicon-github-original"></i>
                 </a>
-                <a className="singleIcon" href={project.link} target="_blank">
-                  <BsLink45Deg />
+                <a className="projectOther" href={project.link} target="_blank">
+                  <BsLink45Deg className="projectOther" />
                 </a>
               </div>
               <div className="leftBottom">
@@ -86,4 +98,4 @@ const Projects = () => {
   </>
 }
 
-export default Projects 
+export default Projects

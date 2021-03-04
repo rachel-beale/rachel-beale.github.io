@@ -34,7 +34,6 @@ const Contact = () => {
           <div className="label">Email</div>
         </div>
         {/* Linkedin */}
-
         <a className="singleIcon" href="https://www.linkedin.com/in/rachel-beale" target="_blank">
           <i className="devicon-linkedin-plain"></i>
           <div className="label">LinkedIn</div>
@@ -45,8 +44,6 @@ const Contact = () => {
           <div className="label">GitHub</div>
         </a>
       </div>
-
-
 
       <div className={emailOpen ? 'contactForm' : 'closed'}>
         <form className="contact-form" onSubmit={sendEmail}>

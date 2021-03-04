@@ -92,24 +92,29 @@ a {
   width: 100%;
   backdrop-filter: blur(2px);
 
-  a {
+    a, .anchor {
     padding: 10px;
     font-size: 20px;
     font-family: $monts;
     font-weight: 100;
     font-size: 25px;
     margin: 0px;
+    padding-top: 15px;
+    text-decoration: none;
   }
-
-  a:hover {
-    border-top: 4px solid $blue;
-  }
-  a:active {
-    border-top: 4px solid $mustard;
-  }
+  // a:hover {
+  //   border-top: 4px solid $blue;
+  // }
 
   a:visited {
     color: black;
+  }
+  
+  .hamburger-react {
+    display: none;
+  }
+  a:hover {
+    border-top: 4px solid $blue;
   }
 }
 
@@ -127,6 +132,7 @@ height: 100vh;
 // * About 
 #about {
   padding-top: 50px;
+  margin: 0px 100px;
   .aboutText {
     width: 70%;
     height: 100px;
@@ -155,12 +161,12 @@ height: 100vh;
 .experienceContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  padding: 30px;
  .h3{
     padding-bottom: 15px;
     text-decoration: underline;
   }
-
   .experience {
     display: flex;
     flex-direction: column;
@@ -202,7 +208,7 @@ height: 100vh;
       color: black;
     }
     .download:hover {
-      color: $mustard;
+      color: $space;
     }
     .underline {
       text-decoration: underline;
@@ -271,6 +277,7 @@ height: 100vh;
 // ? pag. 
 #projects {
   padding-top: 60px;
+  margin: 0px 50px;
   .numbers {
   display: flex;
   flex-direction: row;
@@ -288,7 +295,7 @@ height: 100vh;
   // ? Projects layout
   #projectMain {
     justify-content: flex-start;
-    margin: 30px;
+    // margin: 30px;
 
     .row {
       display: flex;
@@ -325,6 +332,22 @@ height: 100vh;
   .leftTop {
     flex-grow: 1;
     margin-bottom: 10px;
+    .iconFlex {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .projectsIcon {
+        font-size: 35px;
+        padding: 3px;
+      }
+      i {
+        color: $space;
+      }
+    }
+    .projectOther, i {
+      color: $space;
+      font-size: 35px;
+    }
   } 
 
   .leftBottom  {
@@ -438,7 +461,37 @@ small {
 }
 
 @media screen and (max-width : 800px) {
+  .navbar {
+    backdrop-filter: none;
+    flex-direction: column;
+    align-items: flex-end;
+    height: fit-content;
+    .hamburger-react {
+      display: block;
+    }
+    .burger {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      backdrop-filter: blur(2px)
+    }
+    .hide {
+      display: none;
+    }
+    a {
+      text-align: right;
+    }
+    a:hover {
+      border-right: 4px solid $blue;
+      border-top: none;
+    }
+  }
+#about {
+  margin: 0px 100px;
+}
   #projects {
+    margin: 0px 20px;
     #projectMain {
           .right {
       display: none;
@@ -447,13 +500,10 @@ small {
   }
 }
 
-@media screen and (max-width : 650px) {
-  h1 {
-    font-size: 80px;
-  }
-}
-
 @media screen and (max-width : 700px) {
+  #about {
+    margin: 0px 20px;
+  }
   #projects {
     #projectMain {
       width: 80%;
@@ -477,6 +527,12 @@ small {
   }
 }
 
+@media screen and (max-width : 650px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
 @media screen and (max-width : 500px) {
   #about {
     height: 200vh;
@@ -492,7 +548,6 @@ small {
       }
     }
   }
-  
 }
 
 @media screen and (max-width : 450px) {

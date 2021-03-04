@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
+import Hamburger from 'hamburger-react'
 
 const NavBar = () => {
-  // const [clicked, setClicked] = useState('')
+  const [isOpen, setOpen] = useState(false)
+  console.log(isOpen)
 
-  // function setActive (e) {
-  //   return setClicked(active)
-  // }
   return <nav>
     <div className="navbar">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <Hamburger
+        toggled={isOpen} toggle={setOpen}
+      />
+      <div className={isOpen ? 'burger' : 'hide'}>
+        <a className="anchor" href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-
   </nav>
 }
 

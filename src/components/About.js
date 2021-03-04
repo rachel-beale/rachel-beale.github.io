@@ -12,13 +12,10 @@ const About = () => {
       <h2>About Me</h2>
       <div className="aboutMain">
         <div className="aboutWord">
-          <p>A wonderful serenity has taken possession of my entire soul, like</p>
-          <p>these sweet mornings of spring which I enjoy with my whole heart.</p>
-          <p>I am alone, and feel the charm of existence in this spot, which was</p>
-          <p>created for the bliss of souls like mine. I am so happy, my dear </p>
-          <p>friend, so absorbed in the exquisite sense of mere tranquil existence,</p>
-          <p>that I neglect my talents. I should be incapable of drawing a single stroke</p>
-          <p>at the present moment; and yet I feel that I never was a greater.</p>
+          <p>I am a junior software engineer with a focus on full stack development, looking to develop and nurture my experience and knowledge within an ethical and forward-thinking company.</p>
+          <p>I was approached by General Assembly at the end of my Software Engineering Immersive Course and am currently a Teaching Assistant for the new cohort of students. </p>
+          <p>Having worked in property and teaching previously, I have strong interpersonal, negotiation and sales skills that would blend well into any team. </p>
+          {/* <p>I am able to offer full stack experience and am excited to share my passion for coding and learning.  </p> */}
         </div>
         <div className="profilePhoto">
           <img src={profile} />
